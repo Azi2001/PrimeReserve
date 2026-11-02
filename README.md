@@ -87,8 +87,8 @@ Install the following before running the application:
 ### 1. Clone the repository
 
 ```bash
-git clone <YOUR_GITHUB_REPOSITORY_URL>
-cd resource-reservation-app
+git clone https://github.com/Azi2001/PrimeReserve.git
+cd PrimeReserve
 ```
 
 ### 2. Install dependencies
