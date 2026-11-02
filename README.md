@@ -4,7 +4,41 @@ PrimeReserve is a full-stack web application designed to help organizations mana
 
 The system allows administrators to manage resources while staff members can view available resources and create reservations. Reservations are automatically confirmed when the selected resource is available for the requested time slot, helping prevent scheduling conflicts.
 
-## Features
+## 🎥 Project Demo
+
+Watch the demonstration of PrimeReserve:
+
+[![PrimeReserve Demo](https://img.youtube.com/vi/8kTc3ouXxTg/hqdefault.jpg)](https://youtu.be/8kTc3ouXxTg)
+
+[▶ Watch the full project demonstration on YouTube](https://youtu.be/8kTc3ouXxTg)
+
+## 📸 Application Screenshots
+
+### Login Page
+
+![PrimeReserve Login](docs/screenshots/login.png)
+
+### Dashboard
+
+![PrimeReserve Dashboard](docs/screenshots/dashboard.png)
+
+### Resource Management
+
+![PrimeReserve Resources](docs/screenshots/resources.png)
+
+### Resource Creation Form
+
+![PrimeReserve Resource Form](docs/screenshots/resources-form.png)
+
+### Reservation Form
+
+![PrimeReserve Reservation Form](docs/screenshots/reservation-form.png)
+
+### Reservations
+
+![PrimeReserve Reservations](docs/screenshots/reservations.png)
+
+## ✨ Features
 
 ### Authentication and Authorization
 - Secure login with password hashing.
@@ -28,16 +62,19 @@ The system allows administrators to manage resources while staff members can vie
 - Access dedicated Resources and Reservations pages.
 - Review upcoming reservations and resource information.
 
-## Technology Stack
+## 🛠️ Technology Stack
 
-- **Frontend:** Next.js, React, TypeScript, Tailwind CSS
-- **Backend:** Next.js API Routes
-- **Database:** PostgreSQL
-- **ORM:** Prisma
-- **Authentication:** JWT-based sessions and HTTP cookies
-- **Password Hashing:** bcryptjs
+| Category | Technologies |
+|---|---|
+| Frontend | Next.js, React, TypeScript, Tailwind CSS |
+| Backend | Next.js API Routes |
+| Database | PostgreSQL |
+| ORM | Prisma |
+| Authentication | JWT-based sessions and HTTP cookies |
+| Password Hashing | bcryptjs |
+| Version Control | Git and GitHub |
 
-## Prerequisites
+## 📋 Prerequisites
 
 Install the following before running the application:
 
@@ -45,12 +82,12 @@ Install the following before running the application:
 - PostgreSQL
 - Git
 
-## Installation and Setup
+## ⚙️ Installation and Setup
 
 ### 1. Clone the repository
 
 ```bash
-git clone <https://github.com/Azi2001/PrimeReserve.git>
+git clone <YOUR_GITHUB_REPOSITORY_URL>
 cd resource-reservation-app
 ```
 
@@ -92,11 +129,13 @@ npx prisma generate
 
 ### 5. Create the initial administrator
 
-Configure ADMIN_NAME, ADMIN_EMAIL, and ADMIN_PASSWORD in your local .env file.
+Configure `ADMIN_NAME`, `ADMIN_EMAIL`, and `ADMIN_PASSWORD` in your local `.env` file.
 
 Run the seed script to create or update the initial administrator account:
 
+```bash
 npm run db:seed
+```
 
 Use a strong administrator password that meets the requirements enforced by the seed script.
 
@@ -110,7 +149,7 @@ Open the local URL printed in the terminal, usually:
 
 http://localhost:3000
 
-## User Roles
+## 👥 User Roles and Permissions
 
 | Capability | Admin | Staff |
 |---|---|---|
@@ -122,17 +161,17 @@ http://localhost:3000
 | View reservations | All reservations | Own reservations |
 | Cancel reservations | Any reservation | Own reservations |
 
-## Reservation Rules
+## 📌 Reservation Rules
 
 - A reservation is automatically confirmed when the resource is available for the requested time.
 - Overlapping reservations for the same resource are rejected.
 - Reservations for different resources can take place during the same time period.
 - Cancelled reservations no longer occupy their original time slot.
 
-## Project Structure
+## 📁 Project Structure
 
 ```text
-resource-reservation-app/
+PrimeReserve/
 ├── app/
 │   ├── api/
 │   │   ├── auth/
@@ -148,23 +187,67 @@ resource-reservation-app/
 │   └── prisma.ts
 ├── prisma/
 │   ├── schema.prisma
-│   └── migrations/
+│   ├── migrations/
+│   └── seed.ts
+├── docs/
+│   └── screenshots/
+│       ├── login.png
+│       ├── dashboard.png
+│       ├── resources.png
+│       ├── resources-form.png
+│       ├── reservation-form.png
+│       └── reservations.png
 ├── public/
-├── .env
 ├── .gitignore
 ├── package.json
 └── README.md
 ```
 
-## Future Improvements
+## 📚 What I Learned
+
+Developing PrimeReserve gave me practical experience in full-stack web application development and helped me strengthen my understanding of several important concepts.
+
+### Frontend Development
+- Building interactive user interfaces using React and Next.js.
+- Working with TypeScript to write structured and type-safe code.
+- Creating reusable components and organizing application pages.
+- Implementing forms, handling user input, and displaying data dynamically.
+
+### Backend Development
+- Creating API routes to handle application requests.
+- Implementing CRUD operations for resources and reservations.
+- Validating user input and handling errors.
+- Applying business rules in the backend to prevent scheduling conflicts.
+
+### Database Design and Management
+- Designing relational database tables and relationships.
+- Working with PostgreSQL and Prisma ORM.
+- Using database migrations to manage schema changes.
+- Understanding relationships between users, resources, and reservations.
+
+### Authentication and Security
+- Implementing user authentication and secure password hashing.
+- Working with JWT-based sessions and HTTP cookies.
+- Applying role-based authorization for Admin and Staff users.
+- Understanding why authorization checks must also be enforced on the backend.
+
+### Problem Solving and Development Workflow
+- Breaking a full-stack project into smaller development tasks.
+- Debugging errors and testing application functionality.
+- Using Git and GitHub for version control and project documentation.
+- Understanding how frontend components, backend APIs, and database operations work together.
+
+## 🚀 Future Improvements
 
 - **Recurring Reservations:** Support daily and weekly bookings for recurring meetings and activities.
 - **Email and In-App Notifications:** Send reservation confirmations, reminders, and cancellation notifications.
 - **Calendar Integration:** Allow users to synchronize reservations with Google Calendar and Microsoft Outlook.
 - **Waitlist Management:** Notify users when a previously booked time slot becomes available after cancellation.
 - **Deployment:** Deploy the application to a hosted platform with a managed PostgreSQL database.
-- **Accessibility and Responsive Design:** Improve keyboard navigation, accessibility support, and usability across desktop, tablet, and mobile devices.
+- **Accessibility and Responsive Design:** Further improve keyboard navigation, accessibility support, and usability across desktop, tablet, and mobile devices.
 
-## Author
+## 👩‍💻 Author
 
 Developed as a full-stack software engineering internship technical assessment.
+
+**GitHub:** [Azi2001](https://github.com/Azi2001)
